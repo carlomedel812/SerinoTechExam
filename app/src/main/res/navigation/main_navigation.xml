@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/productsListFragment">
+
+    <fragment
+        android:id="@+id/productsListFragment"
+        android:name="com.example.serinotechexam.lists.ProductsListFragment"
+        android:label="ProductsListFragment" >
+        <action
+            android:id="@+id/action_productsListFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment">
+
+            <argument
+                android:name="EXTRA_PRODUCT_ID"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.serinotechexam.details.ProductDetailFragment"
+        android:label="ProductDetailFragment" />
+</navigation>
